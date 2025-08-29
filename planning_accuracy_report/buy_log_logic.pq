@@ -8,8 +8,8 @@ let
     source_remove_top_rows = Table.Skip(source, 4),
 
     // Promotes top row as header in source data
-    source_promoted_headers = promote_headers(source_remove_top_rows)
+    source_promote_headers = promote_headers(source_remove_top_rows)
 
 in
     // source as table
-    source_promoted_headers as table
+    source_promote_headers as table

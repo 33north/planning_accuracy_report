@@ -10,9 +10,12 @@ let
     // Removes top 1 row in source data
     source_removed_top_rows = Table.Skip(source_remove_first_column, 1),
 
+    // Keep rows that are not null
+    source_remove_nulls = remove_blank_rows(source_removed_top_rows),
+
     // Promotes top row as header in source data
-    source_promoted_headers = promote_headers(source_removed_top_rows)
+    source_promote_headers = promote_headers(source_remove_nulls)
 
 in
     // source as table
-    source_promoted_headers as table
+    source_promote_headers as table
