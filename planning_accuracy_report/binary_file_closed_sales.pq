@@ -2,8 +2,13 @@
 // This is the actual file data in binary form
 // This will be passed to function like Excel.Workbook() to extract sheets and tables
 let
-    folder_path = "T:\Demand Planning\Carry ATS review\Exports\Closed Sales",
-    filename_prefix = "Closed sales - size level",
+    //// Original location of the Closed Sales data
+    // folder_path = "T:\Demand Planning\Carry ATS review\Exports\Closed Sales",
+    // filename_prefix = "Closed sales - size level",
+
+    //// Closed Sales data that has been partially cleaned
+    folder_path = "C:\Users\luan.nguyen\Documents\monolith\planning_accuracy_report\__raw_data",
+    filename_prefix = "closed_sales",
     filename_extension = ".xlsx",
 
     // Calls GetLatestFileList function
